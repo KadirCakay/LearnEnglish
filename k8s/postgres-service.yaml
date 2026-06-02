@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-service # Backend bu servis ismi üzerinden veri tabanını bulacak.
+spec:
+  selector:
+    app: postgres-db     # Gelen istekleri sırtında bu etiket olan poda yönlendir.
+  ports:
+    - port: 5432         # Dışarıdan bu portla istek kabul et.
+      targetPort: 5432   # İçerideki podun bu portuna teslim et.
+  type: ClusterIP        # Sadece cluster içinde çalış, dış internete kapalı ol (Güvenlik).
