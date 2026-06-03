@@ -36,7 +36,7 @@ const ProfilePage = () => {
 
   return (
     <div className="page-container fade-in">
-      <h1 className="page-title">KADİR ÇAKAY</h1>
+      <h1 className="page-title">bulut bilisim</h1>
       <div className="glass-card profile-card">
         <div className="avatar">{profile.username[0]}</div>
         <h2>{profile.username}</h2>
